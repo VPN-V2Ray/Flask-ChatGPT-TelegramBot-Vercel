@@ -18,7 +18,7 @@ chat_language = os.getenv("INIT_LANGUAGE", default = "zh") #amend here to change
 	
 MSG_LIST_LIMIT = int(os.getenv("MSG_LIST_LIMIT", default = 20))
 LANGUAGE_TABLE = {
-	  "zh": "哈囉！",
+	  "zh": "您好！",
 	  "en": "Hello!",
       "jp": "こんにちは"
 	}
@@ -27,7 +27,7 @@ LANGUAGE_TABLE = {
 class Prompts:
     def __init__(self):
         self.msg_list = []
-        self.msg_list.append(f"AI:{LANGUAGE_TABLE[chat_language]}")
+        self.msg_list.append(f"ChatGPT🌈 {LANGUAGE_TABLE[chat_language]}")
 	    
     def add_msg(self, new_msg):
         if len(self.msg_list) >= MSG_LIST_LIMIT:
